@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+/* html{
+  font-family:'ProximaNova', 'Roboto'!important; */
+html{
+  overflow-x: hidden!important;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'ProximaNova', Helvetica, sans-serif;
+  overflow-x: hidden!important;
+}
+
+@font-face {
+  font-family:'ProximaNova';
+  src: url('/fonts/proximanova_bold.otf') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:'ProximaNova';
+  src: url('/fonts/proximanova_regular.ttf') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:'ProximaNova';
+  src: url('/fonts/proximanova_light.otf') format('woff2');
+  font-weight: 30;
+  font-style: normal;
+}
+
+@keyframes rotate-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-rotate-gradient {
+  background-size: 200% 200%;
+  animation: rotate-gradient 3s linear infinite;
+}
+
+/* Estilos para el scrollbar en WebKit (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 10px; /* Ancho del scrollbar */
+  height: 8px; /* Altura del scrollbar (para scroll horizontal) */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color de fondo del track */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; /* Color del thumb (la barra que se mueve) */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color del thumb al hacer hover */
+}
+
+/* Estilos para el scrollbar en Firefox */
+* {
+  scrollbar-width:thin; /* Ancho del scrollbar */
+  scrollbar-color: #888 #f1f1f1; /* Color del thumb y del track */
+}
